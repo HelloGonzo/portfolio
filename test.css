@@ -47,7 +47,7 @@ h1 #name {
 }
 
 #name-plate {
-    margin-top: 0px;
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,7 +146,7 @@ h1 #name {
     background: #e76f51;
     position: relative;
     bottom: 12vw;
-    right: 54vw;
+    right: 56vw;
     animation: 1.1s ease-out 1s fallIn;
     animation-fill-mode: backwards;
 }
@@ -257,6 +257,19 @@ h1 #name {
     height: 85%;
     border-end-start-radius: 5px;
     border-end-end-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.window-content h2 {
+    font-family: "Calistoga";
+    font-size: 1rem;
+    margin-top: 40px;
+}
+
+.window-content #dev {
+    font-size: 1.2rem;
 }
 
 .nav-bar {
@@ -329,9 +342,9 @@ h1 #name {
 
 .one {
     background-color:#2a9d8f;
-    position: relative;
-    top: 15px;
-    right: 30px;
+    position: absolute;
+    top: 225px;
+    right: 117px;
     transform: rotate(-6deg);
     animation: .9s ease-in 1s cardStackRight;
     animation-fill-mode: backwards;
@@ -339,9 +352,9 @@ h1 #name {
 
 .two {
     background-color:#e76f51;
-    position: relative;
-    bottom: 270px;
-    left: 25px;
+    position: absolute;
+    top: 225px;
+    left: 113px;
     transform: rotate(8deg);
     animation: .9s ease-in 1s cardStackLeft;
     animation-fill-mode: backwards;
@@ -353,7 +366,12 @@ h1 #name {
 .three {
     background-color:#264653;
     position: relative;
-    bottom: 550px;
+    z-index: 10;
+}
+
+.three .window-content {
+    background-image: url(./browser\ windows/web-page-projects.png);
+    background-size: 200px;
 }
 
 .three .search-bar {
