@@ -1,8 +1,14 @@
 
+html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 #name-plate {
     width: 500px;
-    margin: 100px auto;
+    margin: 100px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
