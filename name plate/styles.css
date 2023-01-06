@@ -121,7 +121,6 @@ h1 #name {
 
 #shapes {
     display: flex;
-    width: 280px;
     justify-content: space-around;
     position: relative;
     bottom: 10px;
