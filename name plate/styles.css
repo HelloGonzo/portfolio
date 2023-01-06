@@ -1,0 +1,213 @@
+
+
+#name-plate {
+    width: 500px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 15px;
+}
+
+h1 {
+    font-family: "Calistoga";
+    z-index: 10;
+}
+
+h1 #intro {
+    font-size: 2rem;
+}
+
+h1 #name {
+    font-size: 3.6rem;
+}
+
+
+
+
+
+@keyframes squareBurst {
+    0% {
+        transform: translate(0, -500px);
+        opacity: 0;
+    }
+    40% {
+        transform: translate(0);
+        opacity: 1;
+    }
+    70% {
+        transform: translate(0, -30px);
+    }
+    100% {
+        transform: translate(0);
+        transform: rotate(-20deg);
+    }
+}
+
+@keyframes circleOneBurst {
+    0% {
+        transform: translate(0, -500px);
+        opacity: 0;
+    }
+    40% {
+        transform: translate(0);
+        opacity: 1;
+    }
+    70% {
+        transform: translate(0, -30px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes circleTwoBurst {
+    0% {
+        transform: translate(0, -500px);
+        opacity: 0;
+    }
+    40% {
+        transform: translate(0);
+        opacity: 1;
+    }
+    70% {
+        transform: translate(0, -30px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes triangleBurst {
+    0% {
+        transform: translate(0, -500px);
+        opacity: 0;
+    }
+    40% {
+        transform: translate(0);
+        opacity: 1;
+    }
+    70% {
+        transform: translate(0, -30px);
+    }
+    100% {
+        transform: translate(0);
+        transform: rotate(40deg);
+    }
+}
+
+@keyframes hexagonBurst {
+    0% {
+        transform: translate(0, -500px);
+        opacity: 0;
+    }
+    40% {
+        transform: translate(0);
+        opacity: 1;
+    }
+    70% {
+        transform: translate(0, -30px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+
+
+
+
+
+#shapes {
+    display: flex;
+    width: 280px;
+    justify-content: space-around;
+    position: relative;
+    bottom: 10px;
+    right: 15px;
+}
+
+#square {
+    width: 30px;
+    height: 30px;
+    background-color: #f4a261; 
+    position: relative;
+    left: 10px;
+    top: 5px;
+    transform: rotate(-20deg);
+    animation: 1s ease-in 1.1s squareBurst;
+    animation-fill-mode: backwards;
+}
+
+#circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%
+}
+
+.circle-one {
+    background: #e9c46a;
+    position: relative;
+    left: 145px;
+    top: 25px;
+    animation: 1s ease .8s circleOneBurst;
+    animation-fill-mode: backwards;
+}
+
+.circle-two {
+    background: #e76f51;
+    position: relative;
+    right: 330px;
+    bottom: 115px;
+    animation: 1.1s ease-out 1s circleTwoBurst;
+    animation-fill-mode: backwards;
+}
+
+#triangle {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #2a9d8f;
+    transform: rotate(40deg);
+    position: relative;
+    left: 40px;
+    bottom: 150px;
+    animation: 1s linear .9s triangleBurst;
+    animation-fill-mode: backwards;
+}
+
+#hexagon {
+    width: 30px;
+    height: 17.32px;
+    background: #264653;
+    position: relative;
+    left: 110px;
+    bottom: 120px;
+    animation: .9s ease-out 1s hexagonBurst;
+    animation-fill-mode: backwards;
+  }
+  #hexagon::before {
+    content: "";
+    position: absolute;
+    top: -8.66px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 8.665px solid #264653;
+  }
+  #hexagon::after {
+    content: "";
+    position: absolute;
+    bottom: -8.66px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 8.66px solid #264653;
+  }
+   
