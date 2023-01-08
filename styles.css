@@ -1,5 +1,7 @@
 
 
+
+
 body {
     margin: 0;
     background-color: rgb(255, 255, 252);
@@ -177,6 +179,13 @@ h1 {
     position: absolute;
 }
 
+@media only screen and (max-height: 500px) {
+    #shapes {
+        width: 50vmax;
+        height: 50vmax;
+    }
+}
+
 .shape {
     width: 40%;
     position: relative;
@@ -191,7 +200,7 @@ h1 {
 
 .yel-circle {
     top: 55%;
-    left: 140%;
+    left: 120%;
     animation: 1s ease .8s fallIn;
     animation-fill-mode: backwards;
 }
@@ -218,12 +227,6 @@ h1 {
 }
 
 
-@media only screen and (max-height: 500px) {
-    #shapes {
-        width: 50vmax;
-        height: 50vmax;
-    }
-}
 
 
 
@@ -402,11 +405,11 @@ h1 {
     background-color:#264653;
     z-index: 10;
 }
-
+/*
 .window.three .window-content {
     background-image: url(./browser-windows/web-page-projects.png);
     background-size: cover;
-}
+}*/
 
 .window.three .search-bar {
     background-color: rgb(0, 0, 0);
@@ -415,6 +418,100 @@ h1 {
 .window.three .menu-bar {
     background-color: #5a8393;
 }
+
+
+
+
+/* -- Fake Grid -- */
+
+.window.three .window-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+}
+
+.grid-bg {
+    width: 90%;
+    height: 150%;
+    margin: 5% 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "head head head"
+        "banner banner side"
+        "banner banner side"
+        "line-a line-a side"
+        "line-b line-c line-c"
+        "line-d line-e line-e"
+        "line-d line-e line-e"
+        "line-f line-f line-f";
+    gap: 5%;
+}
+
+.block {
+    width: 100%;
+    background-color: rgb(232, 232, 232);
+    border-radius: 2px;
+}
+
+.block.one {
+    grid-area: head;
+}
+.block.two {
+    grid-area: banner;
+}
+.block.three {
+    grid-area: side;
+}
+.block.four {
+    grid-area: line-a;
+}
+.block.five {
+    grid-area: line-b;
+}
+.block.six {
+    grid-area: line-c;
+}
+.block.seven {
+    grid-area: line-d;
+}
+.block.eight {
+    grid-area: line-e;
+}
+.block.nine {
+    grid-area: line-f;
+}
+
+
+
+#enter {
+    position: absolute;
+    bottom: 35%;
+    align-self: center;
+    text-align: center;
+}
+
+#enter h2 {
+    font-family: "Abril fatface";
+    font-size: 8vw;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 1;
+    background: linear-gradient(120deg, #ffe39c 0%, #ffe39c 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 40%;
+    background-position: 0 60%;
+}
+
+@media only screen and (min-width: 700px) {
+    #enter h2 {
+        font-size: 56px;
+    }
+}
+
+
+
 
 
 
