@@ -252,8 +252,8 @@ h1 {
     border-top: 2.9vmin solid #264653;
   }
 
-/*
-  @media only screen and (min-width: 575px) {
+
+  @media only screen and (max-height: 570px) {
     
     #square {
         width: 57px;
@@ -305,7 +305,7 @@ h1 {
 
 }
 
-*/
+
 
 
 
@@ -485,9 +485,9 @@ h1 {
 }
 
 
-/*
 
-@media only screen and (min-width: 575px) {
+
+ @media only screen and (max-height: 570px) {
     
     #windows {
         width: 348px;
@@ -509,7 +509,7 @@ h1 {
     }
 
 }
-*/
+
 
 
 
@@ -534,8 +534,13 @@ h1 {
         left: 48vmin;
     }
 
+    #circle-two {
+        bottom: 17vmin;
+        right: 52vmin;
+    }
+
     #window-container {
-        margin-left: 120px;
+        margin-left: 100px;
         position: relative;
         transform: rotate(10deg);
         top: 100px;
