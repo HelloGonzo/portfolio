@@ -10,8 +10,124 @@ body {
 #grid {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    margin: 10vmin 0 15vmin;
+    margin: 18vmin 0 15vmin;
 }
+
+@media only screen and (min-width: 700px) {
+    #grid {
+        margin: 10vmin 0 15vmin;
+    }
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+/* -- Header -- */
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    z-index: 15;
+}
+
+header img {
+    height: 12vmin;
+    max-height: 50px;
+}
+
+#languages {
+    display: none;
+}
+
+#contact {
+    display: flex;
+    align-items: center;
+}
+
+#languages {
+    display: none;
+    margin: 4vmin 5vmin;  
+}
+
+#mail {
+    margin: 4vmin 5vmin;
+    cursor: pointer;  
+}
+
+
+#email-popup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+
+.popup {
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+    overflow: hidden;
+    width: 0;
+    opacity: 0; 
+    transition: .5s;
+}
+
+
+.popup.is-active {
+    width: 100%;
+    opacity: 1;
+}
+
+.popup p {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(57, 57, 57, 0.103);
+    padding: 2vmin 5vmin;
+    margin: 0 3vmin 3vmin;
+}
+
+
+@media only screen and (min-width: 600px) {
+    #mail {
+        margin: 0;
+    }
+    #git {
+        margin: 25px 30px;
+    }
+    #languages {
+        display: block;
+        margin: 25px 30px;
+    }
+    header {
+        justify-content: space-between;
+    }
+    #email-popup {
+        align-items: flex-end;
+    }
+}
+
+@media only screen and (max-height: 500px) {
+   
+    #languages {
+        margin: 4vmax 5vmax;  
+    }
+    
+    #git {
+        margin: 4vmax 5vmax;  
+    }
+}
+
+
 
 
 
@@ -29,13 +145,15 @@ body {
 @media only screen and (max-height: 500px) {
    
     #name-plate {
-        margin: 10vmax 0 25vmax;
+        margin: 15vmax 0 25vmax;
     }
 }
 
 #name-text {
     font-family: "Calistoga";
     z-index: 10;
+    display: flex;
+    flex-direction: column;
 }
 
 #hello {
@@ -60,6 +178,7 @@ h1 {
     font-size: 10vw;
     margin: 0;
 }
+
 
 
 
@@ -485,6 +604,20 @@ h1 {
 
 
 
+
+
+
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+
+
 #enter {
     position: absolute;
     bottom: 35%;
@@ -510,6 +643,16 @@ h1 {
     }
 }
 
+#enter:hover {
+    animation: .5s grow;
+    cursor: pointer;
+    animation-fill-mode: both;
+}
+
+#enter a:active {
+    color:#264653;
+}
+
 
 
 
@@ -524,6 +667,15 @@ h1 {
 
 @media only screen and (min-width: 1200px) {
     
+    header {
+        justify-content: end;
+    }
+
+    #languages {
+        position: relative;
+        left: 142px;
+    }
+
     main {
         display: flex;
         flex-direction: column;
@@ -533,10 +685,6 @@ h1 {
     #grid {
         display: flex;
         margin-top: 17vmin;
-    }
-
-    #name-plate {
-        margin: 10vmax 0 25vmax;
     }
 
     #name-plate {
