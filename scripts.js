@@ -17,3 +17,14 @@ function toggleGitHub() {
     git.classList.toggle('is-active');
 }
 */
+
+
+const copyBtn = document.getElementById('copy-btn');
+const copyEmail = document.getElementById('copy-email');
+
+copyBtn.addEventListener('click', copy);
+
+function copy() {
+    navigator.clipboard.writeText(copyEmail.innerHTML);
+    email.classList.remove('is-active');
+}

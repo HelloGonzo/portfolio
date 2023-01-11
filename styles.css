@@ -13,7 +13,7 @@ body {
     margin: 18vmin 0 15vmin;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 650px) {
     #grid {
         margin: 10vmin 0 15vmin;
     }
@@ -52,6 +52,16 @@ header img {
     align-items: center;
 }
 
+#contact img:hover {
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+#contact img:not(:hover) {
+    transform: scale(1);
+    transition: .2s;
+}
+
 #languages {
     display: none;
     margin: 4vmin 5vmin;  
@@ -75,12 +85,18 @@ header img {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     z-index: 20;
     overflow: hidden;
     height: 0;
     opacity: 0; 
     transition: .5s;
+    background-color:white;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(57, 57, 57, 0.103);
+    margin: 0 3vmin 3vmin;
 }
+
 
 
 .popup.is-active {
@@ -90,11 +106,15 @@ header img {
 
 .popup p {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(57, 57, 57, 0.103);
-    padding: 2vmin 5vmin;
-    margin: 0 3vmin 3vmin;
+}
+.popup img {
+    height: 25px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.popup img:active {
+    filter: invert(.5);
 }
 
 
@@ -120,11 +140,11 @@ header img {
 @media only screen and (max-height: 500px) {
    
     #languages {
-        margin: 4vmax 5vmax;  
+        margin: 20px 25px;  
     }
     
     #git {
-        margin: 4vmax 5vmax;  
+        margin: 20px 25px; 
     }
 }
 
@@ -146,7 +166,7 @@ header img {
 @media only screen and (max-height: 500px) {
    
     #name-plate {
-        margin: 15vmax 0 25vmax;
+        margin: 18vmax 0 25vmax;
     }
 }
 
@@ -391,6 +411,17 @@ h1 {
 }
 
 
+@keyframes scroll {
+    0% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(0, -200px);
+    }
+}
+
+
+
 #window-container {
     grid-row: 2;
     display: flex;
@@ -567,6 +598,9 @@ h1 {
         "line-d line-e line-e"
         "line-f line-f line-f";
     gap: 5%;
+    /*animation: 10s scroll linear;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;*/
 }
 
 .block {
@@ -606,19 +640,6 @@ h1 {
 
 
 
-
-
-@keyframes grow {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.1);
-    }
-}
-
-
-
 #enter {
     position: absolute;
     bottom: 35%;
@@ -645,9 +666,14 @@ h1 {
 }
 
 #enter:hover {
-    animation: .5s grow;
+    transform: scale(1.1);
+    transition: .5s;
     cursor: pointer;
-    animation-fill-mode: both;
+}
+
+#enter:not(:hover) {
+    transform: scale(1);
+    transition: .5s;
 }
 
 #enter a:active {
@@ -674,7 +700,7 @@ h1 {
 
     #languages {
         position: relative;
-        left: 142px;
+        left: 114px;
     }
 
     main {
