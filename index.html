@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Calistoga&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Mansalva&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="./styles.css" rel="stylesheet">
     <title>Portfolio Working</title>
 </head>
@@ -13,18 +13,17 @@
         <img id="languages" src="./assets/language-logos.png" alt="My Languages: HTML, CSS, and JavaScript">
         <div id="email-popup">
             <div id="contact">
-                <img id="mail" src="./assets/mail-icon.png" alt="mail icon">
-                <a href="https://github.com/HelloGonzo" target="_blank"><img id="git" src="./assets/github-icon.png" alt="github icon" title="github.com/HelloGonzo"></a>
+                <img id="mail" class="hover" src="./assets/mail-icon.png" alt="mail icon">
+                <img id="git" class="hover" src="./assets/github-icon.png" alt="github icon" title="github.com/HelloGonzo">
             </div>
             <div id="email" class="popup">
                 <p id="copy-email">elenabrosseau@gmail.com</p>
-                <img id="copy-btn" src="http://clipground.com/images/copy-4.png" 
-          title="Click to Copy"
-      >
+                <img id="copy-btn" src="./assets/copy-icon.png" 
+          title="Click to Copy">
             </div>
-            <!--<div id="github" class="popup">
-                <p>github.com/HelloGonzo</p>
-            </div>-->
+            <div id="github" class="popup">
+                <a href="https://github.com/HelloGonzo" target="_blank"><p>github.com/HelloGonzo</p></a>
+            </div>
         </div>
     </header>
     <main>
@@ -84,15 +83,17 @@
                         <div class="window-content">
                         </div>
                     </div>
-                    <div class="window three">
+                    <div id="front-window" class="window three">
                         <div class="nav-bar">
                             <div class="browser-btns">
-                                <div class="browser-btn red"></div>
+                                <div id="close-browser" class="browser-btn red">
+                                    <img id="x-icon" src="./assets/x-icon.png">
+                                </div>
                                 <div class="browser-btn yellow"></div>
                                 <div class="browser-btn green"></div>
                             </div>
                             <div class="search-bar">
-                                <p>https://www.HelloGonzo.github.io</p>
+                                <p>https://www.HelloGonzo.github.io/portfolio</p>
                             </div>
                             <div class="menu">
                                 <div class="menu-bar"></div>
@@ -100,8 +101,8 @@
                                 <div class="menu-bar"></div>
                             </div>
                         </div>
-                        <div class="window-content">
-                            <div class="grid-bg">
+                        <div id="front-content" class="window-content">
+                            <div id="grid-bg">
                                 <div class="block one"></div>
                                 <div class="block two"></div>
                                 <div class="block three"></div>
@@ -112,11 +113,15 @@
                                 <div class="block eight"></div>
                                 <div class="block nine"></div>
                             </div>
+                            <div id="about-me">
+                                <p><span id="welcome">Welcome,</span> &nbsp; I'm a self-taught web developer working with HTML, CSS, and JavaScript, based on Long Island, New York. 
+                                    <br><br>
+                                Feel free to check out my work and reach out if you'd like to chat!</p>
+                                <p id="projects-2" class="hover">projects</p>
+                            </div>
                             <div id="enter">
-                                <a href="./pages/projects.html">
-                                    <h2>View</h2>
-                                    <h2>Work</h2>
-                                </a>
+                                    <h2 id="about" class="hover">about</h2>
+                                    <h2 class="hover">projects</h2>
                             </div>
                         </div>
                     </div>
