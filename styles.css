@@ -92,6 +92,10 @@ header img {
     cursor: pointer;  
 }
 
+#git {
+    cursor: pointer;   
+}
+
 
 #email-popup {
     display: flex;
